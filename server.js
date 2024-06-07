@@ -5,12 +5,13 @@ const app = express();
 const { quotes } = require('./data');
 const { getRandomElement } = require('./utils');
 
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
 app.listen(PORT, () => {
-  console.log("Server is running on port 4001")
+  console.log("Server is running on port 3000")
+  console.log("https://localhost:3000")
 })
 
 app.get('/api/quotes/random', (req, res, next) => {
